@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block title%}HOME{%endblock%}
+{%block content%}
+<!--<h1>welcome to home page</h1>-->
+   <div class="container">
+        <div class="row mt-3" >
+    {%for product in product_list%}
+        <div class="col-md-4" >
+            <h4>{{product.title}}</h4>
+        <img src="{{product.image.url}}" alt="" width='200' height="250">
+            <p>Rs. {{product.price}}</p>
+                <a href="{%url 'view' product.id%}" class="btn btn-primary">View</a>
+        </div>
+    {%endfor%}
+    </div>
+   </div>
+
+
+<!-- <div class="container">-->
+<!--        <div class="row">-->
+<!--    {%for product in product_list%}-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--  <img src="{{product.image.url}}" class="card-img-top" alt="..." width='100' height="300" >-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">{{product.title}}</h5>-->
+<!--    <p>Rs. {{product.price}}</p>-->
+<!--    <a href="#" class="btn btn-primary">Add to cart</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--    {%endfor%}-->
+<!--    </div>-->
+<!--   </div>-->
+{%endblock%}

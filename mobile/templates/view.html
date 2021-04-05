@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block title%}HOME{%endblock%}
+{%block content%}
+
+<!--<div class="container" style="align:'center';">-->
+
+<!--    <img src="{{mobile.image.url}}"  alt="..." width='220' height="300" >-->
+
+<!--    <h3>{{mobile.title}}</h3>-->
+<!--    <h5>Rs. {{mobile.price}}</h5>-->
+<!--    <p>{{mobile.description}}</p>-->
+<!--    <h6>{{mobile.warranty}}</h6>-->
+<!--    <h6>{{mobile.return_policy}}</h6>-->
+<!--    <a href="#" class="btn btn-primary">Add to cart</a>-->
+
+<!--</div>-->
+
+<div class="container">
+    <h3>{{mobile.title}}</h3><hr>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{mobile.image.url}}" alt=""  width="350" height="400">
+
+        </div>
+        <div class="col-md-8">
+            <h4>{{mobile.title}} </h4>
+
+            <h5>Price: Rs. {{mobile.price}}</h5>
+            <a href="{%url 'cart' mobile.id%}" class="btn btn-primary">Add To Cart</a>
+            <hr>
+            <p class="text-info">Warranty: {{mobile.warranty}}</p>
+            <p class="text-info">Return Policy:{{mobile.return_policy}}</p>
+            <hr>
+            <p>{{mobile.description}}</p>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}
